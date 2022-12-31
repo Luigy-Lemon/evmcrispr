@@ -1,0 +1,42 @@
+{
+  "name": "@1hive/evmcrispr",
+  "version": "0.9.0",
+  "codename": "morphean simulation",
+  "license": "GPL-3.0",
+  "description": "A library that encapsulates actions in EVM scripts for DAOs",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "author": "Blossom Labs",
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/isomorphic-fetch": "^0.0.36",
+    "@types/lodash.clonedeep": "^4.5.7",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "arcsecond": "^4.1.0",
+    "isomorphic-fetch": "^3.0.0",
+    "jsymbol": "^0.3.5",
+    "lodash.clonedeep": "^4.5.0"
+  },
+  "peerDependencies": {
+    "@1hive/evmcrispr-aragonos-module": "workspace:^0.9.0",
+    "@1hive/evmcrispr-giveth-module": "workspace:^0.9.0",
+    "@1hive/evmcrispr-tenderly-module": "workspace:^0.9.0",
+    "ethers": "^5.6.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "tsc --noEmit && eslint",
+    "chain": "hardhat node",
+    "create-fixtures": "hardhat run scripts/create-fixtures.ts",
+    "create-docs": "typedoc",
+    "preinstall": "npx only-allow pnpm",
+    "test": "hardhat test",
+    "test:coverage": "nyc --reporter=lcov pnpm test"
+  }
+}
