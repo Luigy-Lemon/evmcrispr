@@ -31,7 +31,7 @@ describe('Giveth > commands > finalize-givbacks <ipfsHash> [--relayer <relayer>]
       );
 
       const batches = await fetch(
-        'https://ipfs.blossom.software/ipfs/' + ipfsHash,
+        'https://ipfs.io/ipfs/' + ipfsHash,
       ).then((data) => data.json());
 
       const interpreter2 = createInterpreter(

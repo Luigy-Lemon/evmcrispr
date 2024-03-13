@@ -50,7 +50,7 @@ export const verifyGivbacks: ICommand<Giveth> = {
       await module.getProvider(),
     );
 
-    const data = await fetch('https://ipfs.blossom.software/ipfs/' + hash).then(
+    const data = await fetch('https://ipfs.io/ipfs/' + hash).then(
       (data) => data.json(),
     );
 

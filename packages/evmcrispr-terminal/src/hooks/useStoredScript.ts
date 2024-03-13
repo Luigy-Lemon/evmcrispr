@@ -25,7 +25,7 @@ export function useScriptFromId(
       if (!isCID(scriptId)) {
         setScript(getScriptSavedInLocalStorage(scriptId));
       } else {
-        setScript(await fetchPin('https://ipfs.blossom.software', scriptId));
+        setScript(await fetchPin('https://ipfs.io', scriptId));
       }
     })();
   }, [scriptId]);

@@ -1,6 +1,6 @@
 import { ErrorConnection, ErrorUnexpectedResult } from './errors';
 
-export const IPFS_GATEWAY = 'https://ipfs.blossom.software/ipfs/'; // "https://gateway.pinata.cloud/ipfs/";
+export const IPFS_GATEWAY = 'https://ipfs.io/ipfs/'; // "https://gateway.pinata.cloud/ipfs/";
 
 export class IPFSResolver {
   async json(
